@@ -9,6 +9,12 @@ services:
     region: oregon
     startCommand: n8n start
     envVars:
+      - key: N8N_BASIC_AUTH_ACTIVE
+        value: true
+      - key: N8N_BASIC_AUTH_USER
+        value: hammo
+      - key: N8N_BASIC_AUTH_PASSWORD
+        value: moh0853339004
       - key: NODE_ENV
         value: production
       - key: N8N_USER_FOLDER
