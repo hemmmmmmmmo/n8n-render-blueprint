@@ -7,6 +7,7 @@ services:
     dockerfilePath: ./Dockerfile
     plan: free
     region: oregon
+    startCommand: n8n start
     envVars:
       - key: NODE_ENV
         value: production
