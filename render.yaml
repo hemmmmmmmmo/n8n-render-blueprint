@@ -5,7 +5,7 @@ services:
     name: n8n
     runtime: docker
     dockerfilePath: ./Dockerfile
-    plan: standard
+    plan: free
     region: oregon
     envVars:
       - key: NODE_ENV
@@ -22,9 +22,6 @@ services:
         sync: false
       - key: N8N_EDITOR_BASE_URL
         sync: false
-    disk:
-      name: disk
-      mountPath: /opt/render/.n8n
-      sizeGB: 1
+
     healthCheckPath: /healthz
     autoDeploy: true
