@@ -1,9 +1,17 @@
-FROM docker.n8n.io/n8nio/n8n:1.102.3
+FROM node:18-slim
 
-# Set Node.js heap size to 90% of available memory for n8n, reserving 10% for Docker
-ENV NODE_OPTIONS="--max-old-space-size=460"
+# Create app directory
+WORKDIR /usr/src/app
 
-# Crypto for Zoho SalesIQ Security
-ENV NODE_FUNCTION_ALLOW_BUILTIN=crypto
+# Install n8n globally
+RUN npm install -g n8n
 
-# No additional configuration needed, using the official image directly
+# Create folders for n8n config
+RUN mkdir -p /home/node/.n8n
+
+# Expose default port
+EXPOSE 5678
+
+# Start n8n
+CMD ["n8n", "start"]
+
