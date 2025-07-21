@@ -4,7 +4,7 @@ FROM node:18-slim
 WORKDIR /usr/src/app
 
 # Install n8n globally
-RUN npm install -g n8n
+RUN npm install -g n8n@1.103.1
 
 # Create folders for n8n config
 RUN mkdir -p /home/node/.n8n
