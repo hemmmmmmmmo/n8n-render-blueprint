@@ -8,27 +8,7 @@ services:
     plan: free
     region: oregon
     startCommand: n8n start
-    envVars:
-      - key: N8N_BASIC_AUTH_ACTIVE
-        value: true
-      - key: N8N_BASIC_AUTH_USER
-        value: hammo
-      - key: N8N_BASIC_AUTH_PASSWORD
-        value: moh0853339004
-      - key: NODE_ENV
-        value: production
-      - key: N8N_USER_FOLDER
-        value: /opt/render/.n8n
-      - key: N8N_ENFORCE_SETTINGS_FILE_PERMISSIONS
-        value: true
-      - key: N8N_RUNNERS_ENABLED
-        value: true
-      - key: N8N_EXECUTIONS_MODE
-        value: "queue"
-      - key: N8N_HOST
-        sync: false
-      - key: N8N_EDITOR_BASE_URL
-        sync: false
+  
 
     healthCheckPath: /healthz
     autoDeploy: true
